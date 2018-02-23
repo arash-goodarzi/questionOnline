@@ -22,18 +22,68 @@ angularFormsApp.config(function ($routeProvider) {
 
 angularFormsApp.controller("HomeController",
     function ($scope, $location, $uibModal, DataService) {
+        //configuration of rating
+        $scope.max = 10;
+        $scope.isReadonly = false;
 
-        $scope.showCreateEmployeeForm = function () {
+        $scope.hoveringOver = function (value, name) {
+            if (name=='Pharmaprix') {
+                $scope.overStarPharmaprix = value;
+                $scope.percentPharmaprix = 100 * (value / $scope.max);
+            }
+            if (name == 'Metro') {
+                $scope.overStarMetro = value;
+                $scope.percentMetro = 100 * (value / $scope.max);
+            }
+            if (name == 'Provigo') {
+                $scope.overStarProvigo = value;
+                $scope.percentProvigo = 100 * (value / $scope.max);
+            }
+
+        };
+
+        //configuration of carosel
+        $scope.myInterval = 3000;
+        $scope.noWrapSlides = false;
+        $scope.active = 0;
+        $scope.slides = [
+            {
+                id: 0,
+                text: "Parmaprix",
+                image: "http://www.espaceconstruction.com/img/projets/pharmaprix/hd/1.jpg"
+
+            },
+            {
+                id: 1,
+                text: "Metro",
+                image: "http://www.groceteria.com/wp-content/uploads/2009/08/100_0331-570x288.jpg"
+
+            },
+            {
+                id: 2,
+                text: "Provigo",
+                image: "http://www.whatquebecwants.com/.a/6a00e55096d6b488330192ab4f561a970d-pi"
+
+            }
+        ];
+        var currIndex = 0;
+
+
+
+
+
+        $scope.showCreateSurveyForm = function () {
             //$location.path('/newEmployeeForm');
 
             $uibModal.open({
                 templateUrl: 'app/EmployeeForm/efTemplate.html',
-                controller: 'efController'
+                controller: 'efController',
+                scope: $scope
             });
 
         };
 
-        $scope.showUpdateEmployeeForm = function (id) {
+        $scope.showUpdateSurveyForm = function (id) {
             //$location.path('/updateEmployeeForm/' + id);
             $scope.id = id;
             $uibModal.open({
@@ -41,6 +91,7 @@ angularFormsApp.controller("HomeController",
                 controller: 'efController',
                 scope:$scope
             });
+
 
         };
 
