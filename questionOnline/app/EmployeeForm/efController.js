@@ -12,11 +12,11 @@ function efController($scope, $window, $routeParams, $uibModal, $uibModalInstanc
 
         $scope.editableEmployee = angular.copy($scope.employee);
 
-        $scope.departments = [
-            "Engineering",
-            "Marketing",
-            "Finance",
-            "Administration"
+        $scope.salaries = [
+            "0~40000",
+            "40001~60000",
+            "60001~80000",
+            "80001~100000"
         ];
 
         $scope.submitForm = function () {

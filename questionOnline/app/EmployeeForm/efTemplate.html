@@ -16,7 +16,13 @@
                            ng-model="editableEmployee.fullName" />
                 </div>
             </div>
-
+            <div class="form-group">
+                <label for="email" class="col-sm-3 control-label">Email</label>
+                <div class="col-sm-9">
+                    <input type="email" id="email" name="email" class="form-control"
+                           ng-model="editableEmployee.email" />
+                </div>
+            </div>
             <div class="form-group">
                 <label for="notes" class="col-sm-3 control-label">Notes</label>
                 <div class="col-sm-9">
@@ -26,11 +32,11 @@
             </div>
 
             <div class="form-group">
-                <label for="department" class="col-sm-3 control-label">Department</label>
+                <label for="salary" class="col-sm-3 control-label">Range of Salary</label>
                 <div class="col-sm-9">
-                    <select name="department" id="department" class="form-control"
-                            ng-model="editableEmployee.department"
-                            ng-options="dept for dept in departments"></select>
+                    <select name="salary" id="salary" class="form-control"
+                            ng-model="editableEmployee.salary"
+                            ng-options="sal for sal in salaries"></select>
                 </div>
             </div>
             <div class="form-group">

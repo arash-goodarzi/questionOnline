@@ -37,7 +37,7 @@ angularFormsApp.controller("HomeController",
             }
             if (name == 'Provigo') {
                 $scope.overStarProvigo = value;
-                $scope.percentProvigo = 100 * (value / $scope.max);
+                $scope.percentProvigo1 = 100 * (value / $scope.max);
             }
 
         };
@@ -56,7 +56,7 @@ angularFormsApp.controller("HomeController",
             {
                 id: 1,
                 text: "Metro",
-                image: "http://www.groceteria.com/wp-content/uploads/2009/08/100_0331-570x288.jpg"
+                image: "https://i.cbc.ca/1.4313601.1506704060!/cpImage/httpImage/image.jpg_gen/derivatives/16x9_620/coutu-metro-20170927.jpg"
 
             },
             {
