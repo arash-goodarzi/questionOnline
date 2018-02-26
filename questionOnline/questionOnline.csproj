@@ -66,11 +66,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\AngularFormsApp.js" />
-    <Content Include="app\EmployeeForm\efController.js" />
-    <Content Include="app\EmployeeForm\efDirective.js" />
+    <Content Include="app\SurveyForm\efController.js" />
+    <Content Include="app\SurveyForm\efDirective.js" />
     <Content Include="app\DataService.js" />
-    <Content Include="app\EmployeeForm\efTemplate.html" />
+    <Content Include="app\SurveyForm\efTemplate.html" />
     <Content Include="app\Home.html" />
+    <Content Include="Content\app.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />

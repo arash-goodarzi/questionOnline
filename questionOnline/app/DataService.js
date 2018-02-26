@@ -1,39 +1,43 @@
 ﻿
 angularFormsApp.factory('DataService',
     function () {
-        var getEmployee = function (id) {
+        var getSurvey = function (id) {
             if (id == 123) {
                 return {
                     id: 123,
+                    dateOfFullfillOfSurvey:"2018-02-24",
                     fullName: "Milton Waddams",
                     place:"Arizona",
                     email:'abc@123.com',
                     notes: "I usally go to provigo",
                     salary: "60001~80000",
-                    dateHired: "11/11/1979",
+                    lastPurchaseTime: "11/11/1979",
                     ratePharmaprix: 10,
                     rateMetro: 8,
-                    rateProvigo:3,
-                    perkCar: true,
-                    perkStock: false,
-                    perkSixWeeks: true,
-                    payrollType: "none"
+                    rateProvigo: 3,
+                    price: true,
+                    quality: true,
+                    brand:false,
+                    easyToUse: true,
+                    nearToYou: false,
+                    advertisement: true,
+                    ageRange: "50-64"
                 };
             }
             return undefined;
         };
 
-        var insertEmployee = function (newEmployee) {
+        var insertSurvey = function (newSurvey) {
             return true;
         };
 
-        var updateEmployee = function (employee) {
+        var updateSurvey = function (survey) {
             return true;
         };
 
         return {
-            insertEmployee: insertEmployee,
-            updateEmployee: updateEmployee,
-            getEmployee: getEmployee
+            insertSurvey: insertSurvey,
+            updateSurvey: updateSurvey,
+            getSurvey: getSurvey
         };
     });

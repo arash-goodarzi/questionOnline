@@ -7,12 +7,12 @@ angularFormsApp.config(function ($routeProvider) {
             templateUrl: "app/Home.html",
             controller: "HomeController"
         })
-        .when("/newEmployeeForm", {
-            templateUrl: "app/EmployeeForm/efTemplate.html",
+        .when("/newSurveyForm", {
+            templateUrl: "app/SurveyForm/efTemplate.html",
             controller: "efController"
         })
-        .when("/updateEmployeeForm/:id", {
-            templateUrl: "app/EmployeeForm/efTemplate.html",
+        .when("/updateSurveyForm/:id", {
+            templateUrl: "app/SurveyForm/efTemplate.html",
             controller: "efController"
         })
         .otherwise({
@@ -73,10 +73,9 @@ angularFormsApp.controller("HomeController",
 
 
         $scope.showCreateSurveyForm = function () {
-            //$location.path('/newEmployeeForm');
 
             $uibModal.open({
-                templateUrl: 'app/EmployeeForm/efTemplate.html',
+                templateUrl: 'app/SurveyForm/efTemplate.html',
                 controller: 'efController',
                 scope: $scope
             });
@@ -84,10 +83,10 @@ angularFormsApp.controller("HomeController",
         };
 
         $scope.showUpdateSurveyForm = function (id) {
-            //$location.path('/updateEmployeeForm/' + id);
+
             $scope.id = id;
             $uibModal.open({
-                templateUrl: 'app/EmployeeForm/efTemplate.html',
+                templateUrl: 'app/SurveyForm/efTemplate.html',
                 controller: 'efController',
                 scope:$scope
             });
